@@ -131,19 +131,19 @@ export default function FincasPage() {
               <div className="grid grid-cols-2 gap-6">
                 <div>
                   <p className="text-4xl font-bold text-[var(--accent)]">+5%</p>
-                  <p className="text-white/80">Revalorización anual media</p>
+                  <p className="text-white">Revalorización anual media</p>
                 </div>
                 <div>
                   <p className="text-4xl font-bold text-[var(--accent)]">4,2%</p>
-                  <p className="text-white/80">Rentabilidad media</p>
+                  <p className="text-white">Rentabilidad media</p>
                 </div>
                 <div>
                   <p className="text-4xl font-bold text-[var(--accent)]">50%</p>
-                  <p className="text-white/80">Menor tributación</p>
+                  <p className="text-white">Menor tributación</p>
                 </div>
                 <div>
                   <p className="text-4xl font-bold text-[var(--accent)]">+12%</p>
-                  <p className="text-white/80">Demanda anual</p>
+                  <p className="text-white">Demanda anual</p>
                 </div>
               </div>
             </motion.div>

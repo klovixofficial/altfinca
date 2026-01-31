@@ -47,7 +47,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[var(--bg)] via-white to-[var(--bg-alt)] py-20 lg:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[var(--bg)] via-white to-[var(--bg-alt)] pt-32 lg:pt-40 pb-20 lg:pb-32">
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-[var(--accent)]/5 rounded-full blur-3xl" />

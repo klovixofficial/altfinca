@@ -198,19 +198,19 @@ export default function CampingsPage() {
               <h3 className="text-2xl font-bold mb-6">
                 Inversión vs. Gestión
               </h3>
-              <p className="text-white/80 mb-6">
+              <p className="text-white mb-6">
                 Puedes invertir en un camping de dos formas:
               </p>
               <div className="space-y-6">
                 <div className="border-l-4 border-[var(--accent)] pl-4">
                   <h4 className="font-semibold text-lg mb-2">Inversor activo</h4>
-                  <p className="text-white/80 text-sm">
+                  <p className="text-white text-sm">
                     Compras y gestionas el camping. Mayor rentabilidad, más implicación.
                   </p>
                 </div>
                 <div className="border-l-4 border-[var(--accent)] pl-4">
                   <h4 className="font-semibold text-lg mb-2">Inversor pasivo</h4>
-                  <p className="text-white/80 text-sm">
+                  <p className="text-white text-sm">
                     Compras y contratas gestión externa. Menos rentabilidad, cero
                     preocupaciones.
                   </p>

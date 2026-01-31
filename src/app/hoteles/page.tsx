@@ -193,19 +193,19 @@ export default function HotelesPage() {
               <div className="grid grid-cols-2 gap-6">
                 <div>
                   <p className="text-4xl font-bold text-[var(--accent)]">10-18%</p>
-                  <p className="text-white/80">ROI anual medio</p>
+                  <p className="text-white">ROI anual medio</p>
                 </div>
                 <div>
                   <p className="text-4xl font-bold text-[var(--accent)]">65%</p>
-                  <p className="text-white/80">Ocupación media</p>
+                  <p className="text-white">Ocupación media</p>
                 </div>
                 <div>
                   <p className="text-4xl font-bold text-[var(--accent)]">85€</p>
-                  <p className="text-white/80">ADR medio</p>
+                  <p className="text-white">ADR medio</p>
                 </div>
                 <div>
                   <p className="text-4xl font-bold text-[var(--accent)]">+8%</p>
-                  <p className="text-white/80">Crecimiento sector</p>
+                  <p className="text-white">Crecimiento sector</p>
                 </div>
               </div>
             </motion.div>

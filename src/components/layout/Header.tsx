@@ -91,22 +91,22 @@ export default function Header() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 overflow-hidden"
+                    className="absolute top-full left-0 mt-2 w-80 min-w-[320px] bg-white rounded-xl shadow-xl border border-gray-100 py-3 overflow-hidden"
                   >
                     {nichosArray.map((nicho) => (
                       <Link
                         key={nicho.id}
                         href={nicho.href}
                         className={cn(
-                          "flex items-center gap-3 px-4 py-3 hover:bg-[var(--bg-alt)] transition-colors",
+                          "flex items-center gap-3 px-6 py-4 hover:bg-[var(--bg-alt)] transition-colors",
                           pathname === nicho.href && "bg-[var(--bg-alt)]"
                         )}
                       >
                         <div className="flex-1">
-                          <p className="font-medium text-[var(--text)]">
+                          <p className="font-medium text-base text-[var(--text)]">
                             {nicho.title}
                           </p>
-                          <p className="text-xs text-[var(--text-muted)]">
+                          <p className="text-sm text-[var(--text-muted)]">
                             ROI: {nicho.roi}
                           </p>
                         </div>

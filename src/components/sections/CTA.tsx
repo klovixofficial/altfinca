@@ -28,7 +28,7 @@ export default function CTA({
 
   const textColor = variant === "default" ? "text-[var(--text)]" : "text-white";
   const subtitleColor =
-    variant === "default" ? "text-[var(--text-light)]" : "text-white/80";
+    variant === "default" ? "text-[var(--text-light)]" : "text-white";
 
   return (
     <section className={`${variants[variant]} py-20`}>

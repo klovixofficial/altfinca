@@ -80,7 +80,7 @@ Card.Description = function CardDescription({
   ...props
 }: React.HTMLAttributes<HTMLParagraphElement>) {
   return (
-    <p className={cn("text-[var(--text-light)] mt-1", className)} {...props}>
+    <p className={cn("text-[var(--text-light)] mt-1 line-clamp-3", className)} {...props}>
       {children}
     </p>
   );
