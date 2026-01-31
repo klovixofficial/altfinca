@@ -23,9 +23,10 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           type={type}
           ref={ref}
           className={cn(
-            "w-full px-4 py-3 rounded-lg border bg-white transition-all duration-200",
+            "w-full px-4 py-3.5 rounded-xl border bg-white shadow-sm transition-all duration-200",
             "placeholder:text-[var(--text-muted)]",
-            "focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent",
+            "hover:border-gray-400",
+            "focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/20 focus:border-[var(--primary)]",
             error
               ? "border-[var(--error)] focus:ring-[var(--error)]"
               : "border-gray-300",
@@ -67,9 +68,10 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         <textarea
           ref={ref}
           className={cn(
-            "w-full px-4 py-3 rounded-lg border bg-white transition-all duration-200 min-h-[120px] resize-y",
+            "w-full px-4 py-3.5 rounded-xl border bg-white shadow-sm transition-all duration-200 min-h-[120px] resize-y",
             "placeholder:text-[var(--text-muted)]",
-            "focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent",
+            "hover:border-gray-400",
+            "focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/20 focus:border-[var(--primary)]",
             error
               ? "border-[var(--error)] focus:ring-[var(--error)]"
               : "border-gray-300",
@@ -107,8 +109,9 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
         <select
           ref={ref}
           className={cn(
-            "w-full px-4 py-3 rounded-lg border bg-white transition-all duration-200 appearance-none cursor-pointer",
-            "focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent",
+            "w-full px-4 py-3.5 rounded-xl border bg-white shadow-sm transition-all duration-200 appearance-none cursor-pointer",
+            "hover:border-gray-400",
+            "focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/20 focus:border-[var(--primary)]",
             error
               ? "border-[var(--error)] focus:ring-[var(--error)]"
               : "border-gray-300",

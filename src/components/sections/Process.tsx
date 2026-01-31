@@ -53,7 +53,7 @@ export default function Process({
 
         {/* Steps */}
         {variant === "horizontal" ? (
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8 items-stretch">
             {steps.map((step, index) => (
               <motion.div
                 key={step.step}

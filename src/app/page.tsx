@@ -110,7 +110,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
             {nichosArray.map((nicho, index) => (
               <motion.div
                 key={nicho.id}
@@ -162,7 +162,7 @@ export default function HomePage() {
             </motion.h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch max-w-5xl mx-auto">
             {HOME_CONTENT.servicios.map((servicio, index) => (
               <motion.div
                 key={index}
@@ -235,19 +235,19 @@ export default function HomePage() {
               <div className="grid grid-cols-2 gap-6">
                 <div>
                   <p className="text-4xl font-bold text-[var(--accent)]">+200</p>
-                  <p className="text-white/80">Inversores activos</p>
+                  <p className="text-white">Inversores activos</p>
                 </div>
                 <div>
                   <p className="text-4xl font-bold text-[var(--accent)]">38%</p>
-                  <p className="text-white/80">Ahorro medio</p>
+                  <p className="text-white">Ahorro medio</p>
                 </div>
                 <div>
                   <p className="text-4xl font-bold text-[var(--accent)]">+5K</p>
-                  <p className="text-white/80">Oportunidades analizadas</p>
+                  <p className="text-white">Oportunidades analizadas</p>
                 </div>
                 <div>
                   <p className="text-4xl font-bold text-[var(--accent)]">98%</p>
-                  <p className="text-white/80">Clientes satisfechos</p>
+                  <p className="text-white">Clientes satisfechos</p>
                 </div>
               </div>
             </motion.div>

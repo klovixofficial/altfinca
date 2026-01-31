@@ -103,7 +103,7 @@ export default function LeadForm({
 
   if (status === "success") {
     return (
-      <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+      <div className="bg-gradient-to-br from-white to-[var(--bg-alt)] rounded-2xl p-8 shadow-xl border border-gray-100 text-center">
         <div className="w-16 h-16 bg-[var(--success)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
           <CheckCircle className="w-8 h-8 text-[var(--success)]" />
         </div>
@@ -122,7 +122,7 @@ export default function LeadForm({
   }
 
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-lg">
+    <div className="bg-gradient-to-br from-white to-[var(--bg-alt)] rounded-2xl p-8 shadow-xl border border-gray-100">
       {title && (
         <h3 className="text-xl font-semibold text-[var(--text)] mb-2">
           {title}

@@ -46,7 +46,7 @@ export default function Pricing({
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 items-stretch max-w-5xl mx-auto">
           {planes.map((plan, index) => (
             <motion.div
               key={plan.nombre}

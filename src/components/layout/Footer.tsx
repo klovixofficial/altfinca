@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram, Twitter } from "lucide-react";
 import { SITE_CONFIG, FOOTER_LINKS, NICHOS } from "@/lib/constants";
 
 export default function Footer() {
@@ -43,6 +43,36 @@ export default function Footer() {
                 <MapPin size={16} />
                 Madrid, España
               </p>
+            </div>
+            {/* Social Media Icons */}
+            <div className="flex items-center gap-4 mt-6">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-gray-300 hover:bg-[var(--accent)] hover:text-white transition-all duration-300"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={18} />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-gray-300 hover:bg-[var(--accent)] hover:text-white transition-all duration-300"
+                aria-label="Instagram"
+              >
+                <Instagram size={18} />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-gray-300 hover:bg-[var(--accent)] hover:text-white transition-all duration-300"
+                aria-label="Twitter"
+              >
+                <Twitter size={18} />
+              </a>
             </div>
           </div>
 

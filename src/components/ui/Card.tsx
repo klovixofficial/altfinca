@@ -17,26 +17,26 @@ export default function Card({
   ...props
 }: CardProps) {
   const variants = {
-    default: "bg-white",
+    default: "bg-white shadow-sm",
     elevated: "bg-white shadow-lg",
-    bordered: "bg-white border border-gray-200",
-    glass: "bg-white/80 backdrop-blur-sm",
+    bordered: "bg-white border border-gray-200 shadow-sm",
+    glass: "bg-white/80 backdrop-blur-sm shadow-sm",
   };
 
   const paddings = {
     none: "",
-    sm: "p-4",
-    md: "p-6",
-    lg: "p-8",
+    sm: "p-5",
+    md: "p-7",
+    lg: "p-9",
   };
 
   return (
     <div
       className={cn(
-        "rounded-xl transition-all duration-300",
+        "rounded-xl overflow-hidden transition-all duration-300",
         variants[variant],
         paddings[padding],
-        hover && "hover:shadow-xl hover:-translate-y-1",
+        hover && "hover:shadow-gold hover:-translate-y-1",
         className
       )}
       {...props}
