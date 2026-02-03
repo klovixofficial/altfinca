@@ -12,10 +12,10 @@ const TXT_D = "#5a5d66";
 
 const IMG = {
   hero: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80",
-  subastas: "https://images.unsplash.com/photo-1582407947092-40bf940be880?w=800&q=80",
+  subastas: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
   fincas: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80",
-  campings: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80",
-  hoteles: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=800&q=80",
+  campings: "https://images.unsplash.com/photo-1487730116645-74489c95b41b?w=800&q=80",
+  hoteles: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
   about1: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
   about2: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
   cta: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
@@ -74,10 +74,10 @@ function Nav() {
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: "32px" }}>
           {["Subastas", "Fincas", "Campings", "Hoteles"].map(i => (
-            <a key={i} href={`#${i.toLowerCase()}`} style={{ color: TXT_M, textDecoration: "none", fontSize: "13px", fontFamily: "'DM Sans', sans-serif", fontWeight: 500, letterSpacing: "1.2px", textTransform: "uppercase", transition: "color 0.3s" }}
+            <a key={i} href={`/${i.toLowerCase()}`} style={{ color: TXT_M, textDecoration: "none", fontSize: "13px", fontFamily: "'DM Sans', sans-serif", fontWeight: 500, letterSpacing: "1.2px", textTransform: "uppercase", transition: "color 0.3s" }}
               onMouseEnter={e => e.target.style.color = GOLD} onMouseLeave={e => e.target.style.color = TXT_M}>{i}</a>
           ))}
-          <a href="#contacto" style={{ padding: "11px 26px", borderRadius: "6px", background: `linear-gradient(135deg, ${GOLD}, ${GOLD_L})`, color: DARK, textDecoration: "none", fontSize: "12px", fontFamily: "'DM Sans', sans-serif", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase", transition: "all 0.3s" }}
+          <a href="/contacto" style={{ padding: "11px 26px", borderRadius: "6px", background: `linear-gradient(135deg, ${GOLD}, ${GOLD_L})`, color: DARK, textDecoration: "none", fontSize: "12px", fontFamily: "'DM Sans', sans-serif", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase", transition: "all 0.3s" }}
             onMouseEnter={e => { e.target.style.transform = "translateY(-1px)"; e.target.style.boxShadow = `0 8px 28px rgba(200,169,78,0.35)`; }}
             onMouseLeave={e => { e.target.style.transform = "none"; e.target.style.boxShadow = "none"; }}>Consulta Gratuita</a>
         </div>
@@ -121,7 +121,7 @@ function Hero() {
                 <a href="#nichos" style={{ padding: "16px 36px", borderRadius: "6px", background: `linear-gradient(135deg, ${GOLD}, ${GOLD_L})`, color: DARK, textDecoration: "none", fontSize: "14px", fontFamily: "'DM Sans', sans-serif", fontWeight: 700, boxShadow: `0 4px 24px rgba(200,169,78,0.3)`, transition: "all 0.3s" }}
                   onMouseEnter={e => { e.target.style.transform = "translateY(-2px)"; e.target.style.boxShadow = `0 12px 40px rgba(200,169,78,0.45)`; }}
                   onMouseLeave={e => { e.target.style.transform = "none"; e.target.style.boxShadow = `0 4px 24px rgba(200,169,78,0.3)`; }}>Explorar Oportunidades</a>
-                <a href="#contacto" style={{ padding: "16px 36px", borderRadius: "6px", border: "1px solid rgba(200,169,78,0.3)", background: "rgba(200,169,78,0.05)", color: GOLD, textDecoration: "none", fontSize: "14px", fontFamily: "'DM Sans', sans-serif", fontWeight: 600, transition: "all 0.3s", backdropFilter: "blur(8px)" }}
+                <a href="/contacto" style={{ padding: "16px 36px", borderRadius: "6px", border: "1px solid rgba(200,169,78,0.3)", background: "rgba(200,169,78,0.05)", color: GOLD, textDecoration: "none", fontSize: "14px", fontFamily: "'DM Sans', sans-serif", fontWeight: 600, transition: "all 0.3s", backdropFilter: "blur(8px)" }}
                   onMouseEnter={e => e.target.style.background = "rgba(200,169,78,0.12)"} onMouseLeave={e => e.target.style.background = "rgba(200,169,78,0.05)"}>Hablar con un Asesor</a>
               </div>
             </FadeIn>
@@ -205,8 +205,8 @@ function Nichos() {
 
 function ImgBlock({ n, right }) {
   return (
-    <div style={{ borderRadius: "14px", overflow: "hidden", position: "relative", height: "310px" }}>
-      <img src={n.img} alt={n.title} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.7s" }}
+    <div style={{ borderRadius: "14px", overflow: "hidden", position: "relative", height: "310px", background: "linear-gradient(135deg, #1a2030 0%, #0d1520 50%, #162030 100%)" }}>
+      <img src={n.img} alt={n.title} loading="eager" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.7s", position: "relative", zIndex: 1 }}
         onMouseEnter={e => e.target.style.transform = "scale(1.06)"} onMouseLeave={e => e.target.style.transform = "scale(1)"} />
       <div style={{ position: "absolute", inset: 0, background: right ? "linear-gradient(225deg, rgba(6,10,18,0.2), transparent 60%)" : "linear-gradient(135deg, rgba(6,10,18,0.2), transparent 60%)" }} />
       <div style={{ position: "absolute", top: "14px", [right ? "right" : "left"]: "14px", padding: "5px 14px", borderRadius: "100px", background: "rgba(6,10,18,0.55)", backdropFilter: "blur(10px)", border: "1px solid rgba(200,169,78,0.2)" }}>
@@ -224,7 +224,7 @@ function TxtBlock({ n }) {
       </div>
       <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "30px", fontWeight: 500, color: TXT, marginBottom: "14px" }}>{n.title}</h3>
       <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", color: TXT_M, lineHeight: 1.75, marginBottom: "22px" }}>{n.desc}</p>
-      <a href="#contacto" style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: GOLD, textDecoration: "none", fontFamily: "'DM Sans', sans-serif", fontSize: "14px", fontWeight: 600, transition: "gap 0.3s" }}
+      <a href={`/${n.id}`} style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: GOLD, textDecoration: "none", fontFamily: "'DM Sans', sans-serif", fontSize: "14px", fontWeight: 600, transition: "gap 0.3s" }}
         onMouseEnter={e => e.currentTarget.style.gap = "14px"} onMouseLeave={e => e.currentTarget.style.gap = "8px"}>Explorar oportunidades <span style={{ fontSize: "18px" }}>→</span></a>
     </div>
   );
@@ -332,7 +332,7 @@ function CTA() {
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "16px", color: TXT_M, lineHeight: 1.75, marginBottom: "40px" }}>
             Agenda una consulta gratuita de 20 minutos. Sin compromiso, sin presión. Solo para entender si hay oportunidades que encajan contigo.
           </p>
-          <a href="#" style={{ display: "inline-block", padding: "18px 52px", borderRadius: "6px", background: `linear-gradient(135deg, ${GOLD}, ${GOLD_L})`, color: DARK, textDecoration: "none", fontSize: "15px", fontFamily: "'DM Sans', sans-serif", fontWeight: 700, boxShadow: `0 4px 28px rgba(200,169,78,0.35)`, transition: "all 0.3s" }}
+          <a href="/contacto" style={{ display: "inline-block", padding: "18px 52px", borderRadius: "6px", background: `linear-gradient(135deg, ${GOLD}, ${GOLD_L})`, color: DARK, textDecoration: "none", fontSize: "15px", fontFamily: "'DM Sans', sans-serif", fontWeight: 700, boxShadow: `0 4px 28px rgba(200,169,78,0.35)`, transition: "all 0.3s" }}
             onMouseEnter={e => { e.target.style.transform = "translateY(-3px)"; e.target.style.boxShadow = `0 16px 48px rgba(200,169,78,0.5)`; }}
             onMouseLeave={e => { e.target.style.transform = "none"; e.target.style.boxShadow = `0 4px 28px rgba(200,169,78,0.35)`; }}>Agenda Tu Consulta Gratuita</a>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "12px", color: TXT_D, marginTop: "16px" }}>Respuesta en menos de 24 horas · Sin compromiso</p>
