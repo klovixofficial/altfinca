@@ -1,21 +1,27 @@
-import './globals.css'
+import './globals.css';
+import ClientLayout from '@/components/ClientLayout';
 
 export const metadata = {
-  title: 'AltFinca | Inversión Inmobiliaria Alternativa',
-  description: 'Inversiones inmobiliarias alternativas: subastas judiciales, fincas rústicas, campings y hoteles rurales. Análisis profesional con IA y acompañamiento integral.',
-  keywords: 'inversión inmobiliaria, subastas judiciales, fincas rústicas, campings, hoteles rurales, inversión alternativa, ROI inmobiliario',
+  title: {
+    default: 'AltFinca — Inversión Inmobiliaria Alternativa',
+    template: '%s | AltFinca',
+  },
+  description: 'Inversión inmobiliaria más allá de lo tradicional: subastas judiciales, fincas rústicas, campings y hoteles rurales. Acompañamiento integral en Castilla-La Mancha.',
+  keywords: 'inversión inmobiliaria, subastas judiciales, fincas rústicas, campings, hoteles rurales, Castilla-La Mancha',
   openGraph: {
-    title: 'AltFinca | Inversión Inmobiliaria Alternativa',
-    description: 'Olvídate de pisos saturados. Accede a subastas, fincas, campings y hoteles con análisis profesional.',
+    title: 'AltFinca — Inversión Inmobiliaria Alternativa',
+    description: 'Subastas, fincas, campings y hoteles rurales. Análisis profesional y acompañamiento completo.',
     type: 'website',
     locale: 'es_ES',
   },
-}
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        <ClientLayout>{children}</ClientLayout>
+      </body>
     </html>
-  )
+  );
 }
